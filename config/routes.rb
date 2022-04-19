@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'game#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/404', to: 'error#not_found'
+  get '/500', to: 'error#internal_server_error'
+
+  get '/play', to: 'game#play'
+  get '/result/:shape', to: 'game#result', as: :result
 end
