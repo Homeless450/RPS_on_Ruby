@@ -1,19 +1,26 @@
 class GameController < ApplicationController
-  include RockPaperScissors
   include MovesLogic
 
-  def initial; end
+  def index; end
 
   def play; end
 
   def result
-    @title = 'rock paper scissors'
-    @again_link = play_path
+    @title = 'Player vs Bot'
     @p1 = params[:shape]
     @p2 = random_move
+    @a = MOVES[@p1]
 
-    @gameresult = game.who_won(@p1, @p2)
-    @result = "#{@gameresult}! /n You chose #{@p1} and computer chose #{@p2}"
+    if game.draw?(@p1, @p2)
+      return @result = 'Draw'
+    end
+
+    @result =
+      if game.can_beat?(@p1, @p2)
+        'You won'
+      else
+        'You lose'
+      end
   end
 
   private def game
