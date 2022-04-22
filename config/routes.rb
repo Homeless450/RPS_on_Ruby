@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :widgets
   root 'game#index'
 
   get '/404', to: 'error#not_found'

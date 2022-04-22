@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.1"
 
-#idk
 gem 'sassc-rails'
 
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
@@ -18,6 +17,7 @@ gem "redis", "~> 4.0"
 gem "draper", "~> 4.0"
 gem "turbolinks"
 gem "listen"
+gem "rspec-rails"
 
 group :development, :test do
   gem "pry-rails"
