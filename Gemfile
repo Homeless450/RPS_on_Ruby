@@ -18,6 +18,7 @@ gem "draper", "~> 4.0"
 gem "turbolinks"
 gem "listen"
 gem "rspec-rails"
+gem "rubocop"
 
 group :development, :test do
   gem "pry-rails"
