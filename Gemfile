@@ -17,11 +17,12 @@ gem "redis", "~> 4.0"
 gem "draper", "~> 4.0"
 gem "turbolinks"
 gem "listen"
-gem "rspec-rails"
 gem "rubocop"
 gem "forwardable"
-gem 'rails-controller-testing'
 
 group :development, :test do
   gem "pry-rails"
+  gem "rspec-rails"
+  gem "rails-controller-testing"
+
 end
