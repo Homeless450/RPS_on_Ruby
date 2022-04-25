@@ -19,6 +19,7 @@ gem "turbolinks"
 gem "listen"
 gem "rspec-rails"
 gem "rubocop"
+gem "forwardable"
 
 group :development, :test do
   gem "pry-rails"

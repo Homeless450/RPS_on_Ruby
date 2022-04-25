@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe RockPaperScissors::Game do
   let(:game){RockPaperScissors::Game.instance}
 
