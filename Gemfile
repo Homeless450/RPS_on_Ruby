@@ -20,6 +20,7 @@ gem "listen"
 gem "rspec-rails"
 gem "rubocop"
 gem "forwardable"
+gem 'rails-controller-testing'
 
 group :development, :test do
   gem "pry-rails"

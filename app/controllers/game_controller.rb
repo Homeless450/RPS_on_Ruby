@@ -1,5 +1,5 @@
 class GameController < ApplicationController
-  include MovesLogic
+  include RockPaperScissors::MovesLogic
 
   def index; end
 
@@ -9,7 +9,6 @@ class GameController < ApplicationController
     @title = 'Player vs Bot'
     @p1 = params[:shape]
     @p2 = random_move
-    @a = MOVES[@p1]
 
     if game.draw?(@p1, @p2)
       return @result = 'Draw'
